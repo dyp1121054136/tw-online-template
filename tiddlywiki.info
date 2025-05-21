@@ -13,7 +13,7 @@
 	"includeWikis": [
 	],
 	"build": {
-		"plugins": ["--load","tiddlers/",
+		"plugins": ["--load","plugins/",
 			"--rendertiddler","$:/core/save/all","index.html","text/plain"],
 		"tiddlers": ["--load","tiddlers/",
 			"--rendertiddler","$:/core/save/all","index.html","text/plain"]
