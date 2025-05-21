@@ -19,6 +19,7 @@ jobs:
       - run: npm install tiddlywiki
       - run: ./node_modules/.bin/tiddlywiki .  --output output --build plugins
       - run: ./node_modules/.bin/tiddlywiki .  --output output --build tiddlers
+      - run: ./node_modules/.bin/tiddlywiki .  --output output --build files
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
