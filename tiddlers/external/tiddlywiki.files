@@ -10,7 +10,7 @@
                 "created": {"source": "created"},  
                 "modified": {"source": "modified"},  
                 "type": "image/jpeg",  
-                "tags": ["external-image", {"source": "subdirectories"}],  
+                "tags": {"source": "subdirectories"},  
                 "text": "",  
                 "_canonical_uri": {"source": "filepath", "prefix": "https://raw.githubusercontent.com/dyp1121054136/tw-online-template/refs/heads/master/files/images/"}  
             }  
