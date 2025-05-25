@@ -13,8 +13,9 @@
     "includeWikis": [],  
     "build": {    
         "index": [    
-              "--setfield", "[tag[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
-              "--setfield", "[tag[image]]", "text", "", "text/plain",    
+              "--save", "[is[image]]", "images",  
+              "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
+              "--setfield", "[is[image]]", "text", "", "text/plain",    
               "--rendertiddler", "$:/core/save/all", "index.html", "text/plain"    
         ]    
      }
