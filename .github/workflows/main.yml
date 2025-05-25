@@ -20,7 +20,7 @@ jobs:
       - run: ./node_modules/.bin/tiddlywiki .  --output output --build externalimages
       - run: ./node_modules/.bin/tiddlywiki .  --output output --build plugins
       - run: ./node_modules/.bin/tiddlywiki .  --output output --build tiddlers
-      # 添加这一步，将图片文件复制到输出目录  
+      # 添加这一步，将图片文件复制到输出目录（已禁用）
       # - run: mkdir -p output/files  
       # - run: cp -r files/images output/files/images
       - name: Deploy to GitHub Pages
