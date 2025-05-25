@@ -14,7 +14,6 @@
     "build": {  
         "externalimages": [  
             "--save", "[is[image]]", "images",  
-            "--savetiddlers", "[is[image]]", "files/images-uri",  
             "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
             "--setfield", "[is[image]]", "text", "", "text/plain",  
             "--render", "$:/core/save/all", "index.html", "text/plain"  
