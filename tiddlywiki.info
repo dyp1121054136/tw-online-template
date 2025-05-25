@@ -13,11 +13,12 @@
     "includeWikis": [],  
     "build": {  
         "externalimages": [  
-            "--save", "[is[image]]", "images",  
-            "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
-            "--setfield", "[is[image]]", "text", "", "text/plain",  
-            "--render", "$:/core/save/all", "index.html", "text/plain"  
-        ],  
+        "--save", "[is[image]]", "images",  
+        "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
+        "--setfield", "[is[image]]", "text", "", "text/plain",  
+        "--savetiddlers", "[is[image]]", "files/images-uri",  
+        "--render", "$:/core/save/all", "index.html", "text/plain"  
+        ],
         "plugins": [  
             "--load", "plugins/",  
             "--rendertiddler", "$:/core/save/all", "index.html", "text/plain"  
