@@ -23,6 +23,7 @@ jobs:
       # 添加这一步，将图片文件复制到输出目录（已禁用）
       # - run: mkdir -p output/files  
       # - run: cp -r files/images output/files/images
+      # 以下是更简洁的部署命令，只保存一次index.html
       - run: npm install tiddlywiki  
       - run: ./node_modules/.bin/tiddlywiki . --output output --build index
       - name: Deploy to GitHub Pages
