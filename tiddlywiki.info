@@ -1,5 +1,5 @@
 {  
-    "description": "",  
+    "description": "我的 TiddlyWiki 站点",  
     "plugins": [  
         "tiddlywiki/highlight"  
     ],  
@@ -12,19 +12,11 @@
     ],  
     "includeWikis": [],  
     "build": {  
-        "externalimages": [  
+        "index": [  
             "--save", "[is[image]]", "images",  
             "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
             "--setfield", "[is[image]]", "text", "", "text/plain",  
             "--render", "$:/core/save/all", "index.html", "text/plain"  
-        ],
-        "plugins": [  
-            "--load", "plugins/",  
-            "--rendertiddler", "$:/core/save/all", "index.html", "text/plain"  
-        ],  
-        "tiddlers": [  
-            "--load", "tiddlers/",  
-            "--rendertiddler", "$:/core/save/all", "index.html", "text/plain"  
         ]  
     }  
 }
