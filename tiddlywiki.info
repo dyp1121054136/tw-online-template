@@ -16,7 +16,7 @@
             "--save", "[is[image]]", "images",  
             "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
             "--setfield", "[is[image]]", "text", "", "text/plain",  
-            "--render", "$:/core/save/all", "externalimages.html", "text/plain"  
+            "--render", "$:/core/save/all", "index.html", "text/plain"  
         ],  
         "plugins": [  
             "--load", "plugins/",  
