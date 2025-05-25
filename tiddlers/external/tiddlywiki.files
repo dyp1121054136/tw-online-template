@@ -12,7 +12,7 @@
                 "type": "image/jpeg",  
                 "tags": {"source": "subdirectories"},  
                 "text": "",  
-                "_canonical_uri": {"source": "filepath", "prefix": "files/images/"}  
+                "_canonical_uri": {"source": "filepath", "prefix": "https://raw.githubusercontent.com/dyp1121054136/tw-online-template/refs/heads/master/files/images/"}  
             }  
         }  
     ]  
