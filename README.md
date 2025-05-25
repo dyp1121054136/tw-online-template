@@ -20,6 +20,8 @@
 
 "Settings"-"Pages"，选"Deploy from a branch"，"gh-pages"-"/ (root)"-"Save"
 
+5、点开右上角"About"，设置勾选"Use your GitHub Pages website"，确定显示网址
+
 #### 示例：
 
 源代码：
