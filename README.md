@@ -22,12 +22,10 @@
 
 5、点开右上角"About"，设置勾选"Use your GitHub Pages website"，确定显示网址
 
-#### 示例：
+#### 其他：
 
-源代码：
+修改图片uri指向路径前缀
 
-https://github.com/dyp1121054136/tiddlywiki-online
+tiddlers/external/tiddlywiki.files
 
-演示：
-
-https://dyp1121054136.github.io/tiddlywiki-online/
+"_canonical_uri": {"source": "filepath", "prefix": "https://raw.githubusercontent.com/dyp1121054136/tw-online-template/refs/heads/master/files/images/"}
