@@ -79,12 +79,48 @@ tiddlers/external/tiddlywiki.files
 }
 ```
 
-```
+.github/workflows/main.yml
+
+```yml
+name: 部署tiddlywiki
+
+on:
+  # push:  
+  #   branches: [ master ]
+  workflow_dispatch:  # 添加手动触发事件
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install tiddlywiki
+      - run: ./node_modules/.bin/tiddlywiki .  --output output --build externalimages
+      # - run: ./node_modules/.bin/tiddlywiki .  --output output --build plugins
+      # - run: ./node_modules/.bin/tiddlywiki .  --output output --build tiddlers
+      # 添加这一步，将图片文件复制到输出目录（已禁用）
+      # - run: mkdir -p output/files  
+      # - run: cp -r files/images output/files/images 
+      - run: ./node_modules/.bin/tiddlywiki . --output output --build index
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ### 其他：
 
-修改图片uri指向路径前缀
+记得修改图片uri指向路径前缀到自己仓库
 
 tiddlers/external/tiddlywiki.files
 
