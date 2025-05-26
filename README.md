@@ -1,8 +1,8 @@
-#### 功能:
+### 功能:
 
 部署在线tiddlywiki中文空白版
 
-#### 步骤：
+### 步骤：
 
 1、复制此模板并新建仓库
 
@@ -22,10 +22,12 @@
 
 5、点开右上角"About"，设置勾选"Use your GitHub Pages website"，确定显示网址
 
-#### 其他：
+### 其他：
 
 修改图片uri指向路径前缀
 
 tiddlers/external/tiddlywiki.files
 
+```json
 "_canonical_uri": {"source": "filepath", "prefix": "https://raw.githubusercontent.com/dyp1121054136/tw-online-template/refs/heads/master/files/images/"}
+```
