@@ -22,6 +22,66 @@
 
 5、点开右上角"About"，设置勾选"Use your GitHub Pages website"，确定显示网址
 
+### 关键代码：
+
+tiddlywiki.info
+
+```json
+{  
+    "description": "我的 TiddlyWiki 站点",  
+    "plugins": [  
+        "tiddlywiki/highlight"  
+    ],  
+    "themes": [  
+        "tiddlywiki/vanilla",  
+        "tiddlywiki/snowwhite"  
+    ],  
+    "languages": [  
+        "zh-Hans"  
+    ],  
+    "includeWikis": [],  
+    "build": {    
+        "externalimages": [    
+            "--save", "[is[image]]", "images",  
+            "--setfield", "[is[image]]", "_canonical_uri", "$:/core/templates/canonical-uri-external-image", "text/plain",  
+            "--setfield", "[is[image]]", "text", "", "text/plain",  
+            "--render", "$:/core/save/all", "index.html", "text/plain"  
+            ],
+        "index": [
+            "--load", "tiddlers/",  
+            "--rendertiddler", "$:/core/save/all", "index.html", "text/plain"
+        ]
+     }
+}
+```
+
+tiddlers/external/tiddlywiki.files
+
+```json
+{  
+    "directories": [  
+        {  
+            "path": "../../files/images/",  
+            "filesRegExp": "^.*\\.(?:jpg|jpeg|png|gif)$",  
+            "isTiddlerFile": false,  
+            "searchSubdirectories": true,  
+            "fields": {  
+                "title": {"source": "basename-uri-decoded"},  
+                "created": {"source": "created"},  
+                "modified": {"source": "modified"},  
+                "type": "image/jpeg",  
+                "tags": {"source": "subdirectories"},  
+                "text": "",  
+                "_canonical_uri": {"source": "filepath", "prefix": "https://raw.githubusercontent.com/dyp1121054136/tw-online-template/refs/heads/master/files/images/"}  
+            }  
+        }  
+    ]  
+}
+```
+
+```
+```
+
 ### 其他：
 
 修改图片uri指向路径前缀
